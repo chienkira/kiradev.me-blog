@@ -1,5 +1,3 @@
-// Ghost runs in `development` mode by default. Full documentation can be found at http://support.ghost.org/config/
-
 var path = require('path'),
     config;
 
@@ -8,10 +6,14 @@ config = {
         url: 'http://kira-dev.com',
         mail: {},
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
+				host     : '107.170.162.158',
+				user     : 'root',
+				password : 'pass',
+				database : 'kira_dev',
+				charset  : 'utf8'
+			},
             debug: false
         },
 
@@ -36,10 +38,14 @@ config = {
         // ```
 
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
-            },
+				host     : '107.170.162.158',
+				user     : 'root',
+				password : 'pass',
+				database : 'kira_dev',
+				charset  : 'utf8'
+			},
             debug: false
         },
         server: {
@@ -49,25 +55,6 @@ config = {
         paths: {
             contentPath: path.join(__dirname, '/content/')
         }
-    },
-
-    'testing-mysql': {
-        url: 'http://127.0.0.1:8020',
-        database: {
-            client: 'mysql',
-            connection: {
-                host     : '127.0.0.1',
-                user     : 'root',
-                password : '',
-                database : 'ghost_testing',
-                charset  : 'utf8'
-            }
-        },
-        server: {
-            host: '127.0.0.1',
-            port: '8020'
-        },
-        logging: false
     }
 };
 
