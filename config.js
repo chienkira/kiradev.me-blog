@@ -24,7 +24,7 @@ config = {
     },
 
     development: {
-        url: 'http:/kiradev.me/blog',
+        url: 'http://kiradev.me/blog',
         //  mail: {
         //      transport: 'SMTP',
         //      options: {
