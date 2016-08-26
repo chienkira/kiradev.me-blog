@@ -3,7 +3,7 @@ var path = require('path'),
 
 config = {
     production: {
-        url: 'http://kiradev.me',
+        url: 'http://kiradev.me/blog',
         mail: {},
         database: {
             client: 'mysql',
@@ -24,7 +24,7 @@ config = {
     },
 
     development: {
-        url: 'http://kiradev.me',
+        url: 'http://kiradev.me/blog',
         //  mail: {
         //      transport: 'SMTP',
         //      options: {
